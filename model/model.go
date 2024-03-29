@@ -8,7 +8,7 @@ import (
 
 type Models struct {
 	Cars       CarModel
-	CarDealers carDealerModel
+	CarDealers CarDealerModel
 }
 
 func NewModels(db *sql.DB) Models {
@@ -20,7 +20,7 @@ func NewModels(db *sql.DB) Models {
 			InfoLog:  infoLog,
 			ErrorLog: errorLog,
 		},
-		CarDealers: carDealerModel{
+		CarDealers: CarDealerModel{
 			DB:       db,
 			InfoLog:  infoLog,
 			ErrorLog: errorLog,
