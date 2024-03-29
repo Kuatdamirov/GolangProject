@@ -60,7 +60,7 @@ func GetCarDealers() []carDealer {
 	return carDealers
 }
 
-func GetRestaurant(id string) (*carDealer, error) {
+func GetCarDealer(id string) (*carDealer, error) {
 	for _, r := range carDealers {
 		if r.Id == id {
 			return &r, nil
