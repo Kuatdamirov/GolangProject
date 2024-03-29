@@ -7,20 +7,20 @@ import (
 )
 
 type Models struct {
-	cars       carModel
-	carDealers carDealerModel
+	Cars       CarModel
+	CarDealers carDealerModel
 }
 
 func NewModels(db *sql.DB) Models {
 	infoLog := log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime)
 	errorLog := log.New(os.Stderr, "ERROR\t", log.Ldate|log.Ltime|log.Lshortfile)
 	return Models{
-		cars: carModel{
+		Cars: CarModel{
 			DB:       db,
 			InfoLog:  infoLog,
 			ErrorLog: errorLog,
 		},
-		carDealers: carDealerModel{
+		CarDealers: carDealerModel{
 			DB:       db,
 			InfoLog:  infoLog,
 			ErrorLog: errorLog,
